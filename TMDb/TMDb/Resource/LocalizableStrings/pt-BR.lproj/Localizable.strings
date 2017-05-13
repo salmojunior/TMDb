@@ -13,3 +13,6 @@
 "errorOnParseRequest" = "Erro ao processar requisição. Tente novamente.";
 "notConnected" = "Sem conexão com internet.";
 "errorTitle" = "Erro";
+
+// MARK: - Movies
+"upcoming" = "Próximos filmes.";

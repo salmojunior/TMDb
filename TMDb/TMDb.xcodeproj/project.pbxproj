@@ -23,6 +23,10 @@
 		2A700A181EC744920030AA43 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A700A171EC744920030AA43 /* LocalizableStrings.swift */; };
 		2A700A1A1EC76C880030AA43 /* MoviesAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A700A191EC76C880030AA43 /* MoviesAPIProvider.swift */; };
 		2A700A1C1EC76C9A0030AA43 /* MoviesAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A700A1B1EC76C9A0030AA43 /* MoviesAPIProtocol.swift */; };
+		2A700A211EC792BC0030AA43 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A700A201EC792BC0030AA43 /* Movie.swift */; };
+		2A700A231EC793020030AA43 /* MovieBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A700A221EC793020030AA43 /* MovieBusiness.swift */; };
+		2A700A251EC793310030AA43 /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A700A241EC793310030AA43 /* BaseManager.swift */; };
+		2A700A271EC793420030AA43 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A700A261EC793420030AA43 /* MovieManager.swift */; };
 		3F53BB4D33009F9B7BCCC6D1 /* Pods_TMDb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD3D8218E1162204BA4DC6F /* Pods_TMDb.framework */; };
 		5571ED301FE4FEAC1CDF0DEC /* Pods_TMDbTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EE26074F3C4FEC8898E14D /* Pods_TMDbTests.framework */; };
 		7ED47AFB8A597357EC2A10CB /* Pods_TMDbUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8E4ABC32D7528BE4E7EF66 /* Pods_TMDbUITests.framework */; };
@@ -72,6 +76,10 @@
 		2A700A171EC744920030AA43 /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		2A700A191EC76C880030AA43 /* MoviesAPIProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesAPIProvider.swift; sourceTree = "<group>"; };
 		2A700A1B1EC76C9A0030AA43 /* MoviesAPIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesAPIProtocol.swift; sourceTree = "<group>"; };
+		2A700A201EC792BC0030AA43 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		2A700A221EC793020030AA43 /* MovieBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieBusiness.swift; sourceTree = "<group>"; };
+		2A700A241EC793310030AA43 /* BaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		2A700A261EC793420030AA43 /* MovieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
 		5DD3D8218E1162204BA4DC6F /* Pods_TMDb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B44F25FD0C7C866D9AC3A9D /* Pods-TMDb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDb.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMDb/Pods-TMDb.release.xcconfig"; sourceTree = "<group>"; };
 		AB8E4ABC32D7528BE4E7EF66 /* Pods_TMDbUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TMDbUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +172,7 @@
 				2A7009E71EC6863C0030AA43 /* Controller */,
 				2A7009EB1EC6863C0030AA43 /* Manager */,
 				2A7009E61EC6863C0030AA43 /* Business */,
+				2A700A1D1EC7922D0030AA43 /* Model */,
 				2A7009EC1EC6863C0030AA43 /* Provider */,
 				2A7009E91EC6863C0030AA43 /* Infrastructure */,
 			);
@@ -173,6 +182,7 @@
 		2A7009E61EC6863C0030AA43 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				2A700A1F1EC792990030AA43 /* Movie */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -198,6 +208,8 @@
 		2A7009EB1EC6863C0030AA43 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				2A700A241EC793310030AA43 /* BaseManager.swift */,
+				2A700A1E1EC792920030AA43 /* Movie */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -296,6 +308,30 @@
 				2A700A171EC744920030AA43 /* LocalizableStrings.swift */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		2A700A1D1EC7922D0030AA43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A700A201EC792BC0030AA43 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A700A1E1EC792920030AA43 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				2A700A261EC793420030AA43 /* MovieManager.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		2A700A1F1EC792990030AA43 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				2A700A221EC793020030AA43 /* MovieBusiness.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		D98064D3EA608B3149D0591E /* Frameworks */ = {
@@ -609,13 +645,17 @@
 			files = (
 				2A7009F71EC6863C0030AA43 /* AppDelegate.swift in Sources */,
 				2A700A1C1EC76C9A0030AA43 /* MoviesAPIProtocol.swift in Sources */,
+				2A700A231EC793020030AA43 /* MovieBusiness.swift in Sources */,
 				2A700A031EC7407B0030AA43 /* APIProvider.swift in Sources */,
+				2A700A251EC793310030AA43 /* BaseManager.swift in Sources */,
 				2A700A0A1EC7415E0030AA43 /* TechnicalError.swift in Sources */,
 				2A700A1A1EC76C880030AA43 /* MoviesAPIProvider.swift in Sources */,
 				2A7009F61EC6863C0030AA43 /* ViewController.swift in Sources */,
+				2A700A271EC793420030AA43 /* MovieManager.swift in Sources */,
 				2A700A011EC740340030AA43 /* NetworkingProvider.swift in Sources */,
 				2A700A0B1EC7415E0030AA43 /* HandleError.swift in Sources */,
 				2A700A091EC7415E0030AA43 /* BusinessError.swift in Sources */,
+				2A700A211EC792BC0030AA43 /* Movie.swift in Sources */,
 				2A700A181EC744920030AA43 /* LocalizableStrings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

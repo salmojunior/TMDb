@@ -13,3 +13,6 @@
 "errorOnParseRequest" = "Error on parse request result. Please, try again";
 "notConnected" = "No network conection.";
 "errorTitle" = "Error";
+
+// MARK: - Movies
+"upcoming" = "Upcoming movies.";

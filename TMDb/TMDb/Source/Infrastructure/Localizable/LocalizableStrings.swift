@@ -19,6 +19,9 @@ enum LocalizableStrings : String {
     case notConnected
     case errorTitle
     
+    // Movies
+    case upcoming
+    
     // MARK: - Public Functions
     
     /**
