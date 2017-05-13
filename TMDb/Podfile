@@ -5,6 +5,7 @@ target 'TMDb' do
   use_frameworks!
 
   # Pods for TMDb
+  pod 'SwiftMessages'
 
   target 'TMDbTests' do
     inherit! :search_paths

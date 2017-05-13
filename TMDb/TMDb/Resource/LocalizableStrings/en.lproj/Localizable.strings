@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  TMDb
+
+  Created by SalmoJunior on 13/05/17.
+  Copyright © 2017 Salmo Junior. All rights reserved.
+*/
+
+// MARK: - Error Handling
+"unexpectedError" = "Unexpected error.";
+"invalidValue" = "Invalid value.";
+"httpError" = "Request error. Please, try again.";
+"errorOnParseRequest" = "Error on parse request result. Please, try again";
+"notConnected" = "No network conection.";
+"errorTitle" = "Error";
