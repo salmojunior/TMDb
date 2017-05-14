@@ -1,12 +1,18 @@
 PODS:
+  - Kingfisher (3.7.2)
+  - Reachability (3.2)
   - SwiftMessages (3.3.3)
 
 DEPENDENCIES:
+  - Kingfisher
+  - Reachability
   - SwiftMessages
 
 SPEC CHECKSUMS:
+  Kingfisher: 5ddc4ac715615cc200de9fdc54ab1511061ea650
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SwiftMessages: 09cea3336e3fb63c3578983c8aac65acaa6d884a
 
-PODFILE CHECKSUM: 71ed72484ff214e08ef4d7e55e48fc8cad0cf047
+PODFILE CHECKSUM: 8b78887feaa2115ca68463e11cbebd9d9a4a50f0
 
 COCOAPODS: 1.2.1

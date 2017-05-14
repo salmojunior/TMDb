@@ -6,6 +6,8 @@ target 'TMDb' do
 
   # Pods for TMDb
   pod 'SwiftMessages'
+  pod 'Reachability'
+  pod 'Kingfisher'
 
   target 'TMDbTests' do
     inherit! :search_paths

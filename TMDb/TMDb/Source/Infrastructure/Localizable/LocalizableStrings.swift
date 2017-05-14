@@ -21,6 +21,8 @@ enum LocalizableStrings : String {
     
     // Movies
     case upcoming
+    case upcomingTitle
+    case release
     
     // MARK: - Public Functions
     

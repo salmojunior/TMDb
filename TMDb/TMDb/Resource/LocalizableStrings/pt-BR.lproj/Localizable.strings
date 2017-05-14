@@ -16,3 +16,5 @@
 
 // MARK: - Movies
 "upcoming" = "Próximos filmes.";
+"upcomingTitle" = "Próximos Filmes";
+"release" = "Lançamento";

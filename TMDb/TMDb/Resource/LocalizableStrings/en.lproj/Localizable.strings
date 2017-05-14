@@ -11,8 +11,10 @@
 "invalidValue" = "Invalid value.";
 "httpError" = "Request error. Please, try again.";
 "errorOnParseRequest" = "Error on parse request result. Please, try again";
-"notConnected" = "No network conection.";
+"notConnected" = "No network connection.";
 "errorTitle" = "Error";
 
 // MARK: - Movies
 "upcoming" = "Upcoming movies.";
+"upcomingTitle" = "Upcoming Movies";
+"release" = "Release";
