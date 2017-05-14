@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// <#Description#>
+/// Movies API Provider
 class MoviesAPIProvider: MoviesAPIProtocol {
     // MARK: - Private Constants
     private let upcomingEndpoint = "/movie/upcoming"
