@@ -19,12 +19,14 @@ class MovieTableViewCell: UITableViewCell {
     // MARK: - Public Functions
     
     func fillIn(movie: Movie) {
+        // Update Labels
         titleLabel.text = movie.title
         releaseDateLabel.text = "\(LocalizableStrings.release.localize()): \(movie.release)"
         genreLabel.text = movie.genres?.reduce("", { (text, genre) -> String in
             return "\(text)\(genre.name) "
         })
         
+        // Update Image View
         let placeholder = UIImage(named: "logo")
         guard let posterURL = movie.posterPath else {
             posterImageView.image = placeholder
@@ -32,9 +34,8 @@ class MovieTableViewCell: UITableViewCell {
             return
         }
         
-        let posterResource = ImageResource(downloadURL: posterURL, cacheKey: movie.id.description)
+        let posterResource = ImageResource(downloadURL: posterURL, cacheKey: posterURL.description)
         
-        // Update UI elements
         posterImageView.kf.setImage(with: posterResource, placeholder: placeholder, options: nil, progressBlock: nil, completionHandler: nil)
     }
 }

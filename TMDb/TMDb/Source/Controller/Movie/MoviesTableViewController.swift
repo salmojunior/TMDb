@@ -30,6 +30,22 @@ class MoviesTableViewController: UITableViewController {
         
         loadGenres()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case MovieDetailsViewController.identifier:
+            guard let movieDetailsViewController = segue.destination as? MovieDetailsViewController else {
+                return
+            }
+            guard let selectedMovie = sender as? Movie else { return }
+            
+            movieDetailsViewController.selectedMovie(movie: selectedMovie)
+        default:
+            return
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -44,6 +60,14 @@ class MoviesTableViewController: UITableViewController {
         cell.fillIn(movie: movie)
 
         return cell
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = movies[indexPath.row]
+        
+        performSegue(withIdentifier: MovieDetailsViewController.identifier, sender: movie)
     }
     
     // MARK: - Private Functions

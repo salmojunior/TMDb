@@ -22,6 +22,7 @@ struct Appearance {
     /// Configure Navigation Appearance
     private static func configureNavigationBar() {
         UINavigationBar.appearance().barTintColor = UIColor.tmdbBlack
+        UINavigationBar.appearance().tintColor = UIColor.tmdbGreen
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.tmdbGreen]
     }
     
