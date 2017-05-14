@@ -12,10 +12,13 @@ import Kingfisher
 
 class MovieDetailsView: UIView {
     // MARK: - Constants
+    
     private let kRatingNormalize = 2.0
     private let kPlaceholderImageName = "logo"
     private let kNavigationHeight: CGFloat = 64
-    fileprivate let kAnimationDuration = 0.5
+    private let kStartElementPosition: CGFloat = 100
+    private let kEndElementPosition: CGFloat = 0
+    private let kAnimationDuration = 0.3
     
     // MARK: - Outlets
     
@@ -28,6 +31,7 @@ class MovieDetailsView: UIView {
     @IBOutlet private weak var backdropImageView: UIImageView!
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var posterTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var genresStackViewTopConstraint: NSLayoutConstraint!
     
     // MARK: - Public Functions
     
@@ -88,9 +92,27 @@ class MovieDetailsView: UIView {
     
     func initialViewElementsStatus() {
         posterImageView.alpha = 0
+        genresLabel.alpha = 0
+        ratingView.alpha = 0
+        overviewLabel.alpha = 0
+        releaseDateLabel.alpha = 0
+        backdropImageView.alpha = 0
+        genresStackViewTopConstraint.constant = kStartElementPosition
     }
     
     func presentingViewElementsStatus() {
         posterImageView.alpha = 1
+        self.genresStackViewTopConstraint.constant = self.kEndElementPosition
+        
+        UIView.animate(withDuration: kAnimationDuration, delay: 0, options: .curveEaseOut, animations: {
+            
+            self.genresLabel.alpha = 1
+            self.ratingView.alpha = 1
+            self.overviewLabel.alpha = 1
+            self.releaseDateLabel.alpha = 1
+            self.backdropImageView.alpha = 1
+            
+            self.layoutIfNeeded()
+        }, completion: nil)
     }
 }
