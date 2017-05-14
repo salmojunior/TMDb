@@ -11,6 +11,7 @@ import Kingfisher
 
 class MovieTableViewCell: UITableViewCell {
     // MARK: - Outlets
+    
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var genreLabel: UILabel!
@@ -24,14 +25,17 @@ class MovieTableViewCell: UITableViewCell {
         releaseDateLabel.text = "\(LocalizableStrings.release.localize()): \(movie.release)"
         
         // Update Genres Label
-        guard let genres = movie.genres else { return }
-        
-        var genresText = genres.reduce("", { (text, genre) -> String in
-            return "\(text)\(genre.name), "
-        })
-        let endIndex = genresText.index(genresText.endIndex, offsetBy: -2)
-        genresText = genresText.substring(to: endIndex)
-        genreLabel.text = genresText
+        if let genres = movie.genres, genres.count > 0 {
+            var genresText = genres.reduce("", { (text, genre) -> String in
+                return "\(text)\(genre.name), "
+            })
+            
+            let endIndex = genresText.index(genresText.endIndex, offsetBy: -2)
+            
+            genresText = genresText.substring(to: endIndex)
+            genreLabel.text = genresText
+            genreLabel.accessibilityLabel = "\(LocalizableStrings.genres.localize()): \(genresText)"
+        }
         
         // Update Image View
         let placeholder = UIImage(named: "logo")
@@ -46,7 +50,6 @@ class MovieTableViewCell: UITableViewCell {
         posterImageView.kf.setImage(with: posterResource, placeholder: placeholder, options: nil, progressBlock: nil, completionHandler: nil)
         
         // Ajustements on Accessibility
-        genreLabel.accessibilityLabel = "\(LocalizableStrings.genres.localize()): \(genresText)"
         accessibilityTraits = UIAccessibilityTraitButton
     }
 }

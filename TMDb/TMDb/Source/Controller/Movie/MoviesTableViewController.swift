@@ -28,10 +28,9 @@ class MoviesTableViewController: UITableViewController, ViewCustomizable {
         super.viewDidLoad()
 
         title = LocalizableStrings.upcomingTitle.localize()
-        tableView.accessibilityIdentifier = "UpcomingTableView"
         navigationController?.delegate = self
-        tableView.tableFooterView = UIView()
         refreshControl?.addTarget(self, action: #selector(MoviesTableViewController.loadMovies), for: UIControlEvents.valueChanged)
+        mainView.initialSetup()
         
         loadGenres()
     }
@@ -100,13 +99,7 @@ class MoviesTableViewController: UITableViewController, ViewCustomizable {
     private func endRefresing() {
         refreshControl?.endRefreshing()
     }
-    
-    private func updateElements(indexPaths: [IndexPath]) {
-        tableView.beginUpdates()
-        tableView.insertRows(at: indexPaths, with: .top)
-        tableView.endUpdates()
-    }
-    
+        
     // Using @objc notation to let the function be private and also be visible to #selector usage
     @objc private func loadMovies() {
         guard let nextPage = nextPage else {
@@ -131,8 +124,8 @@ class MoviesTableViewController: UITableViewController, ViewCustomizable {
                     indexPaths.append(indexPath)
                 }
                 
-                weakSelf.updateElements(indexPaths: indexPaths)
                 weakSelf.endRefresing()
+                weakSelf.mainView.updateElements(at: indexPaths)
             } catch {
                 weakSelf.endRefresing()
                 HandleError.handle(error: error)
