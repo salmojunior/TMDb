@@ -13,8 +13,13 @@
 "errorOnParseRequest" = "Erro ao processar requisição. Tente novamente.";
 "notConnected" = "Sem conexão com internet.";
 "errorTitle" = "Erro";
+"hide" = "Fechar";
 
 // MARK: - Movies
 "upcoming" = "Próximos filmes.";
 "upcomingTitle" = "Próximos Filmes";
 "release" = "Lançamento";
+"movieDetailsTitle" = "Detalhes";
+"genres" = "gêneros";
+"title" = "título";
+"overview" = "resumo";

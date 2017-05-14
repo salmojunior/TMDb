@@ -13,8 +13,13 @@
 "errorOnParseRequest" = "Error on parse request result. Please, try again";
 "notConnected" = "No network connection.";
 "errorTitle" = "Error";
+"hide" = "Hide";
 
 // MARK: - Movies
 "upcoming" = "Upcoming movies.";
 "upcomingTitle" = "Upcoming Movies";
 "release" = "Release";
+"movieDetailsTitle" = "Movie Details";
+"genres" = "genres";
+"title" = "title";
+"overview" = "overview";

@@ -93,7 +93,7 @@ struct HandleError {
         // View setup
         let view = MessageView.viewFromNib(layout: .MessageView)
         
-        view.configureContent(title: title, body: description, iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
+        view.configureContent(title: title, body: description, iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: LocalizableStrings.hide.localize(), buttonTapHandler: { _ in SwiftMessages.hide() })
         view.configureTheme(.info, iconStyle: .default)
         
         // Config setup
@@ -112,7 +112,7 @@ struct HandleError {
         // View setup
         let view = MessageView.viewFromNib(layout: .StatusLine)
 
-        view.configureContent(title: title, body: description, iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: "Hide", buttonTapHandler: { _ in SwiftMessages.hide() })
+        view.configureContent(title: title, body: description, iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: LocalizableStrings.hide.localize(), buttonTapHandler: { _ in SwiftMessages.hide() })
         view.configureTheme(.info, iconStyle: .light)
         
         // Config setup

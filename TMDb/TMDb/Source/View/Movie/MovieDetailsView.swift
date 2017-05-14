@@ -64,6 +64,13 @@ class MovieDetailsView: UIView {
         posterImageView.kf.setImage(with: posterResource, placeholder: placeholder, options: nil, progressBlock: nil, completionHandler: nil)
         backdropImageView.kf.setImage(with: backdropResource, placeholder: placeholder, options: nil, progressBlock: nil, completionHandler: nil)
         
+        // Accessibility
+        titleLabel.accessibilityLabel = "\(LocalizableStrings.title.localize()): \(movie.title)"
+        overviewLabel.accessibilityLabel = "\(LocalizableStrings.overview.localize()): \(movie.overview)"
+        if let genres = genresLabel.text {
+            genresLabel.accessibilityLabel = "\(LocalizableStrings.genres.localize()): \(genres)"
+        }
+        
         // Force right elements position before present view
         layoutIfNeeded()
     }

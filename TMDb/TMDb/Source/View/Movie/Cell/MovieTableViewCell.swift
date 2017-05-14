@@ -22,9 +22,16 @@ class MovieTableViewCell: UITableViewCell {
         // Update Labels
         titleLabel.text = movie.title
         releaseDateLabel.text = "\(LocalizableStrings.release.localize()): \(movie.release)"
-        genreLabel.text = movie.genres?.reduce("", { (text, genre) -> String in
-            return "\(text)\(genre.name) "
+        
+        // Update Genres Label
+        guard let genres = movie.genres else { return }
+        
+        var genresText = genres.reduce("", { (text, genre) -> String in
+            return "\(text)\(genre.name), "
         })
+        let endIndex = genresText.index(genresText.endIndex, offsetBy: -2)
+        genresText = genresText.substring(to: endIndex)
+        genreLabel.text = genresText
         
         // Update Image View
         let placeholder = UIImage(named: "logo")
@@ -37,5 +44,9 @@ class MovieTableViewCell: UITableViewCell {
         let posterResource = ImageResource(downloadURL: posterURL, cacheKey: posterURL.description)
         
         posterImageView.kf.setImage(with: posterResource, placeholder: placeholder, options: nil, progressBlock: nil, completionHandler: nil)
+        
+        // Ajustements on Accessibility
+        genreLabel.accessibilityLabel = "\(LocalizableStrings.genres.localize()): \(genresText)"
+        accessibilityTraits = UIAccessibilityTraitButton
     }
 }

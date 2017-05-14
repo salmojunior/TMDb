@@ -25,6 +25,7 @@ class MovieDetailsViewController: UIViewController, Identifiable, ViewCustomizab
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = LocalizableStrings.movieDetailsTitle.localize()
     }
     
     // MARK: - Public Functions

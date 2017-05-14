@@ -18,11 +18,16 @@ enum LocalizableStrings : String {
     case errorOnParseRequest
     case notConnected
     case errorTitle
+    case hide
     
     // Movies
     case upcoming
     case upcomingTitle
     case release
+    case movieDetailsTitle
+    case genres
+    case title
+    case overview
     
     // MARK: - Public Functions
     
