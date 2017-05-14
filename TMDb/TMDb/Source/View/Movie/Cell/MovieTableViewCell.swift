@@ -11,7 +11,7 @@ import Kingfisher
 
 class MovieTableViewCell: UITableViewCell {
     // MARK: - Outlets
-    @IBOutlet private weak var posterImageView: UIImageView!
+    @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var genreLabel: UILabel!
     @IBOutlet private weak var releaseDateLabel: UILabel!

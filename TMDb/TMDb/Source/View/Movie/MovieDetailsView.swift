@@ -14,6 +14,8 @@ class MovieDetailsView: UIView {
     // MARK: - Constants
     private let kRatingNormalize = 2.0
     private let kPlaceholderImageName = "logo"
+    private let kNavigationHeight: CGFloat = 64
+    fileprivate let kAnimationDuration = 0.5
     
     // MARK: - Outlets
     
@@ -24,6 +26,8 @@ class MovieDetailsView: UIView {
     @IBOutlet private weak var overviewLabel: UILabel!
     @IBOutlet private weak var releaseDateLabel: UILabel!
     @IBOutlet private weak var backdropImageView: UIImageView!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var posterTopConstraint: NSLayoutConstraint!
     
     // MARK: - Public Functions
     
@@ -59,5 +63,27 @@ class MovieDetailsView: UIView {
         
         posterImageView.kf.setImage(with: posterResource, placeholder: placeholder, options: nil, progressBlock: nil, completionHandler: nil)
         backdropImageView.kf.setImage(with: backdropResource, placeholder: placeholder, options: nil, progressBlock: nil, completionHandler: nil)
+        
+        // Force right elements position before present view
+        layoutIfNeeded()
+    }
+    
+    func posterImageViewFrame() -> CGRect {
+        // Calculate final Poster frame before load view for custom transition
+        let xPosition = posterImageView.frame.origin.x
+        let yPosition = titleLabel.frame.origin.y + titleLabel.frame.size.height + posterTopConstraint.constant + kNavigationHeight
+        let posterWidth = posterImageView.frame.size.width
+        let posterHeight = posterImageView.frame.size.height
+        let posterFrame = CGRect(x: xPosition, y: yPosition, width: posterWidth, height: posterHeight)
+        
+        return posterFrame
+    }
+    
+    func initialViewElementsStatus() {
+        posterImageView.alpha = 0
+    }
+    
+    func presentingViewElementsStatus() {
+        posterImageView.alpha = 1
     }
 }

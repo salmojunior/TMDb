@@ -15,7 +15,7 @@
         <scene sceneID="01e-nY-l7X">
             <objects>
                 <tableViewController id="k2k-40-oSq" customClass="MoviesTableViewController" customModule="TMDb" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="NAQ-zs-b7U">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="NAQ-zs-b7U" customClass="MovieTableView" customModule="TMDb" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -138,7 +138,7 @@
                                                         <color key="textColor" red="0.031372549020000001" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otL-ie-k0v" customClass="CosmosView" customModule="Cosmos">
+                                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otL-ie-k0v" customClass="CosmosView" customModule="Cosmos">
                                                         <rect key="frame" x="0.0" y="195" width="175" height="30"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -152,7 +152,7 @@
                                                                 <color key="value" red="0.0039215686269999999" green="0.82352941180000006" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                                                <color key="value" red="0.031372549020000001" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
                                                                 <integer key="value" value="2"/>
@@ -236,9 +236,11 @@
                         </constraints>
                         <connections>
                             <outlet property="backdropImageView" destination="yQN-Iv-2ER" id="MRZ-s0-sg7"/>
+                            <outlet property="containerView" destination="AQi-wx-aes" id="4yv-U2-eV3"/>
                             <outlet property="genresLabel" destination="SqJ-K4-xBi" id="rs9-uJ-Tny"/>
                             <outlet property="overviewLabel" destination="GfM-4E-TBF" id="PoF-o3-2jj"/>
                             <outlet property="posterImageView" destination="MO2-xd-3dZ" id="Tvq-Ax-jj8"/>
+                            <outlet property="posterTopConstraint" destination="9DX-Vp-PDe" id="gSJ-cu-aPi"/>
                             <outlet property="ratingView" destination="otL-ie-k0v" id="C3b-wE-id4"/>
                             <outlet property="releaseDateLabel" destination="047-Hy-3qq" id="hZR-Ix-0pZ"/>
                             <outlet property="titleLabel" destination="d9y-Xg-L28" id="ugM-1C-cJB"/>

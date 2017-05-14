@@ -32,4 +32,20 @@ class MovieDetailsViewController: UIViewController, Identifiable, ViewCustomizab
     func selectedMovie(movie: Movie) {
         self.movie = movie
     }
+    
+    func posterImageViewPosition() -> CGRect {
+        return mainView.posterImageViewFrame()
+    }
+}
+
+// MARK: - SharedElementAnimation controller delegate
+extension MovieDetailsViewController: SharedElementAnimationControllerDelegate {
+    
+    func willStartAnimation(animator: SharedElementAnimationController) {
+        mainView.initialViewElementsStatus()
+    }
+    
+    func didCompleteAnimation(animator: SharedElementAnimationController) {
+        mainView.presentingViewElementsStatus()
+    }
 }
