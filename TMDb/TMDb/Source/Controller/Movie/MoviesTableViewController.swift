@@ -28,6 +28,7 @@ class MoviesTableViewController: UITableViewController, ViewCustomizable {
         super.viewDidLoad()
 
         title = LocalizableStrings.upcomingTitle.localize()
+        tableView.accessibilityIdentifier = "UpcomingTableView"
         navigationController?.delegate = self
         tableView.tableFooterView = UIView()
         refreshControl?.addTarget(self, action: #selector(MoviesTableViewController.loadMovies), for: UIControlEvents.valueChanged)

@@ -88,6 +88,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="DQ2-y5-7yO"/>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="t0t-ks-OD6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle"/>
                     </refreshControl>
@@ -119,6 +120,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9y-Xg-L28">
                                                 <rect key="frame" x="15" y="10" width="345" height="25.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="titleLabel"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                 <color key="textColor" red="0.031372549020000001" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
