@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  TMDb
+
+  Created by SalmoJunior on 13/05/17.
+  Copyright © 2017 Salmo Junior. All rights reserved.
+*/
+
+// MARK: - Error Handling
+"unexpectedError" = "Unexpected error.";
+"invalidValue" = "Invalid value.";
+"httpError" = "Request error. Please, try again.";
+"errorOnParseRequest" = "Error on parse request result. Please, try again";
+"notConnected" = "No network connection.";
+"errorTitle" = "Error";
+"hide" = "Hide";
+
+// MARK: - Movies
+"upcoming" = "Upcoming movies.";
+"upcomingTitle" = "Upcoming Movies";
+"release" = "Release";
+"movieDetailsTitle" = "Movie Details";
+"genres" = "genres";
+"title" = "title";
+"overview" = "overview";

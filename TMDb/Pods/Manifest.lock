@@ -1,0 +1,21 @@
+PODS:
+  - Cosmos (9.0.0)
+  - Kingfisher (3.7.2)
+  - Reachability (3.2)
+  - SwiftMessages (3.3.3)
+
+DEPENDENCIES:
+  - Cosmos
+  - Kingfisher
+  - Reachability
+  - SwiftMessages
+
+SPEC CHECKSUMS:
+  Cosmos: 33eee62b2a0418452aef470f711f83c3ea061b7b
+  Kingfisher: 5ddc4ac715615cc200de9fdc54ab1511061ea650
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SwiftMessages: 09cea3336e3fb63c3578983c8aac65acaa6d884a
+
+PODFILE CHECKSUM: 218f1e54881e336d2ad656e5431e391d1ac58b79
+
+COCOAPODS: 1.2.1

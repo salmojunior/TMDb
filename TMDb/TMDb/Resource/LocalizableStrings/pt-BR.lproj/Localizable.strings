@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  TMDb
+
+  Created by SalmoJunior on 13/05/17.
+  Copyright © 2017 Salmo Junior. All rights reserved.
+*/
+
+// MARK: - Error Handling
+"unexpectedError" = "Erro inesperado.";
+"invalidValue" = "Valor inválido.";
+"httpError" = "Erro ao acessar filmes. Tente novamente.";
+"errorOnParseRequest" = "Erro ao processar requisição. Tente novamente.";
+"notConnected" = "Sem conexão com internet.";
+"errorTitle" = "Erro";
+"hide" = "Fechar";
+
+// MARK: - Movies
+"upcoming" = "Próximos filmes.";
+"upcomingTitle" = "Próximos Filmes";
+"release" = "Lançamento";
+"movieDetailsTitle" = "Detalhes";
+"genres" = "gêneros";
+"title" = "título";
+"overview" = "resumo";

@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'TMDb' do
+  use_frameworks!
+
+  # Pods for TMDb
+  pod 'SwiftMessages'
+  pod 'Reachability'
+  pod 'Kingfisher'
+  pod 'Cosmos'
+
+  target 'TMDbTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TMDbUITests' do
+    inherit! :search_paths
+    # Pods for ui testing
+  end
+
+end
